@@ -30,5 +30,5 @@ steps:
   displayName: Push image to docker hub
   inputs:
     containerRegistry: 'ciberadodockerhub'
-    repository: '$(imageName)'
+    repository: $(imageName)
     command: 'push'
