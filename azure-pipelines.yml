@@ -26,3 +26,9 @@ steps:
     repository: $(imageName)
     command: build
     Dockerfile: Dockerfile
+- task: Docker@2
+  displayName: Push image to docker hub
+  inputs:
+    containerRegistry: 'ciberadodockerhub'
+    repository: '$(imageName)'
+    command: 'push'
